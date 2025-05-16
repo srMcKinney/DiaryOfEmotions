@@ -141,7 +141,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Счастье"
+                            android:text="Страх"
                             android:textColor="@color/text_primary"
                             android:textSize="14sp" />
 
@@ -182,7 +182,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Спокойствие"
+                            android:text="Злость"
                             android:textColor="@color/text_primary"
                             android:textSize="14sp" />
 
@@ -223,7 +223,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Возбуждение"
+                            android:text="Радость"
                             android:textColor="@color/text_primary"
                             android:textSize="14sp" />
 
@@ -264,7 +264,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Тревога"
+                            android:text="Печаль"
                             android:textColor="@color/text_primary"
                             android:textSize="14sp" />
 
@@ -305,7 +305,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Гнев"
+                            android:text="Отвращение"
                             android:textColor="@color/text_primary"
                             android:textSize="14sp" />
 
@@ -345,7 +345,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Грусть"
+                            android:text="Доверие"
                             android:textColor="@color/text_primary"
                             android:textSize="14sp" />
 
@@ -368,6 +368,88 @@
                         android:progress="5"
                         android:progressTint="@color/blue_primary"
                         android:thumbTint="@color/blue_primary" />
+                </LinearLayout>
+
+                <!-- Ползунок гнева -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Интерес"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/interesting_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/interesting_seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:max="10"
+                        android:progress="5"
+                        android:progressTint="@color/red_primary"
+                        android:thumbTint="@color/red_primary" />
+                </LinearLayout>
+
+                <!-- Ползунок гнева -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Удивление"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/i443_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/i43242_seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:max="10"
+                        android:progress="5"
+                        android:progressTint="@color/red_primary"
+                        android:thumbTint="@color/red_primary" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
