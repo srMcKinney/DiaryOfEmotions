@@ -23,8 +23,8 @@ class DiaryFragment : Fragment() {
 
     private lateinit var dateText: TextView
     private lateinit var emotionIcon: ImageView
-    private lateinit var feelingsInput: EditText
-    private lateinit var commentsInput: EditText
+    private lateinit var feelingsInput: TextView
+    private lateinit var commentsInput: TextView
 
     private lateinit var emotionRepository: EmotionRepository
     private lateinit var authManager: AuthManager
@@ -68,14 +68,6 @@ class DiaryFragment : Fragment() {
 
         // Set up auto-save
         setupAutoSave()
-
-        view.findViewById<View>(R.id.add_entry_button).setOnClickListener {
-            // Navigate to diary fragment to add a new entry
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, AddEntryFragment())
-                .addToBackStack(null)
-                .commit()
-        }
     }
 
     private fun updateDateDisplay() {
