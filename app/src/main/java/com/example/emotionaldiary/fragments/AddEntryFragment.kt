@@ -24,7 +24,6 @@ class AddEntryFragment : Fragment() {
     private lateinit var mainFeelingsEditText: EditText
     private lateinit var additionalInfoEditText: EditText
     private lateinit var dateTextView: TextView
-    private lateinit var saveButton: Button
     private lateinit var backButton: ImageButton
 
     // Ползунки эмоций
@@ -76,13 +75,18 @@ class AddEntryFragment : Fragment() {
 
         // Проверка наличия существующей записи на эту дату
         checkExistingEntry()
+
+        view.findViewById<View>(R.id.save_button).setOnClickListener {
+            // Navigate to diary fragment to add a new entry
+            parentFragmentManager.beginTransaction()
+                saveEntry()
+        }
     }
 
     private fun initializeViews(view: View) {
         mainFeelingsEditText = view.findViewById(R.id.main_feelings_edit_text)
         additionalInfoEditText = view.findViewById(R.id.additional_info_edit_text)
         dateTextView = view.findViewById(R.id.date_text_view)
-        saveButton = view.findViewById(R.id.save_button)
         backButton = view.findViewById(R.id.back_button)
 
         // Инициализация ползунков
@@ -161,9 +165,6 @@ class AddEntryFragment : Fragment() {
         }
 
         // Кнопка сохранения
-        saveButton.setOnClickListener {
-            saveEntry()
-        }
     }
 
     private fun checkExistingEntry() {

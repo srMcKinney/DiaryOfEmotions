@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/profile_card"
@@ -24,52 +31,19 @@
             android:layout_height="wrap_content"
             android:padding="16dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/avatar_container"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="24dp"
-                app:cardElevation="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:id="@+id/avatar_image"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="@string/profile_image"
-                    android:src="@drawable/ic_person" />
-            </androidx.cardview.widget.CardView>
-
             <TextView
                 android:id="@+id/user_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="8dp"
+                android:gravity="center"
                 android:text="@string/ivan_ivanov"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/arrow_icon"
-                app:layout_constraintStart_toEndOf="@+id/avatar_container"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/arrow_icon"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:contentDescription="@string/navigate"
-                android:src="@drawable/ic_arrow_right"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
-
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -97,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:text="@string/login_settings"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/arrow_icon_login"
@@ -109,12 +83,10 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:contentDescription="@string/navigate"
-                android:src="@drawable/ic_arrow_right"
+                android:src="@drawable/chevron_forward"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/text_primary" />
-
+                app:layout_constraintTop_toTopOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -142,40 +114,42 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:text="@string/notifications"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/arrow_icon_notifications"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <ImageView
                 android:id="@+id/arrow_icon_notifications"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:contentDescription="@string/navigate"
-                android:src="@drawable/ic_arrow_right"
+                android:src="@drawable/chevron_forward"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/text_primary" />
-
+                app:layout_constraintTop_toTopOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-    <Button
+    <androidx.cardview.widget.CardView
         android:id="@+id/logout_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/rounded_button"
-        android:padding="12dp"
-        android:text="Выйти из аккаун��а"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notifications_card" />
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/green_middle"
+        app:cardCornerRadius="16dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="выйти из аккаунта"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

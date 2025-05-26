@@ -32,9 +32,9 @@ class SettingsFragment : Fragment() {
         val userNameText = view.findViewById<TextView>(R.id.user_name)
         userNameText.text = authManager.getUserFullName()
 
-        // Настраиваем кнопку выхода
-        val logoutButton = view.findViewById<Button>(R.id.logout_button)
-        logoutButton.setOnClickListener {
+        view.findViewById<View>(R.id.logout_button).setOnClickListener {
+            // Navigate to diary fragment to add a new entry
+            parentFragmentManager.beginTransaction()
             authManager.logout()
             Toast.makeText(context, "Вы вышли из аккаунта", Toast.LENGTH_SHORT).show()
 
@@ -50,7 +50,10 @@ class SettingsFragment : Fragment() {
         }
 
         view.findViewById<View>(R.id.notifications_card).setOnClickListener {
-            Toast.makeText(context, "Настройки уведомлений", Toast.LENGTH_SHORT).show()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, NotificationSettingsFragment())
+                .addToBackStack(null)
+                .commit()
         }
     }
 }

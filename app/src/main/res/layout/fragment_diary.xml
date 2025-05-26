@@ -33,7 +33,7 @@
                     android:layout_height="48dp"
                     android:background="@drawable/circle_background"
                     android:gravity="center"
-                    android:text="12"
+                    android:text="1"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -127,9 +127,9 @@
                                 android:id="@+id/feelings_input"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:padding="8dp"
+                                android:padding="16dp"
                                 android:background="@null"
-                                android:hint="Как вы себя чувствуете сегодня?"
+                                android:hint="ещё нет записей"
                                 android:inputType="textMultiLine"
                                 android:maxLines="2"
                                 android:textColor="@color/white"
@@ -157,7 +157,7 @@
                             android:layout_height="wrap_content"
                             android:background="@color/green_light"
                             android:padding="16dp"
-                            android:text="ощущения в целом:"
+                            android:text="комментарий к записи:"
                             android:textColor="@color/white"
                             android:textSize="14sp" />
 
@@ -165,7 +165,8 @@
                         android:id="@+id/comments_input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="8dp"
+                        android:padding="16dp"
+                        android:layout_marginBottom="8dp"
                         android:background="@null"
                         android:hint="Комментарий"
                         android:inputType="textMultiLine"
@@ -215,37 +216,6 @@
                     android:layout_marginTop="16dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/chart_placeholder" />  <!-- Corrected to chart drawable -->
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Карточка с советами -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/green_middle"
-            app:cardCornerRadius="25dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Совет дня:"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tip_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Практика благодарности может помочь улучшить ваше настроение. Попробуйте записать три вещи, за которые вы благодарны сегодня."
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

@@ -31,7 +31,7 @@
                     android:layout_height="48dp"
                     android:background="@drawable/circle_background"
                     android:gravity="center"
-                    android:text="12"
+                    android:text="1"
                     android:textColor="@color/text_primary"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -44,7 +44,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="@string/today_date"
+                    android:text="Сегодня, 27 мая"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -117,16 +117,14 @@
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:contentDescription="@string/previous_month"
-                                android:src="@drawable/arrow_left"
-                                app:tint="@color/blue_accent" />
+                                android:src="@drawable/arrow_left"/>
 
                             <ImageView
                                 android:id="@+id/next_month"
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:contentDescription="@string/next_month"
-                                android:src="@drawable/ic_arrow_right"
-                                app:tint="@color/blue_accent" />
+                                android:src="@drawable/ic_arrow_right" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -260,49 +258,6 @@
                         android:textColor="@color/white"
                         android:textSize="16sp" />
                 </androidx.cardview.widget.CardView>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <ImageView
-            android:id="@+id/body_diagram"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginBottom="16dp"
-            android:contentDescription="@string/body_diagram"
-            android:scaleType="fitCenter"
-            android:src="@drawable/body_diagram" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/trends_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="@color/green_medium"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="2dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/green_medium"
-                    android:padding="16dp"
-                    android:text="@string/trends"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-                <ImageView
-                    android:id="@+id/chart_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:contentDescription="@string/trends_chart"
-                    android:padding="16dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/chart_placeholder" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

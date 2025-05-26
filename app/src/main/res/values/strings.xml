@@ -82,4 +82,11 @@
     <string name="additional_comments_hint">Добавьте комментарии к вашим эмоциям...</string>
     <string name="emotion_scale">Эмоциональная шкала</string>
     <string name="save_entry">Сохранить запись</string>
+
+    <string name="back">Назад</string>
+    <string name="notification_settings">Настройки уведомлений</string>
+    <string name="enable_notifications">Включить уведомления</string>
+    <string name="notification_time">Время уведомления</string>
+    <string name="change_time">Изменить время</string>
+    <string name="notification_description">Описание уведомлений</string>
 </resources>

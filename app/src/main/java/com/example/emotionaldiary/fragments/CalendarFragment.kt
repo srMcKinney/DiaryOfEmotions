@@ -48,6 +48,15 @@ class CalendarFragment : Fragment() {
         entriesList = view.findViewById(R.id.entries_list)
         data_text = view.findViewById(R.id.date_text)
 
+        fun updateDateDisplay() {
+            val dateFormat = SimpleDateFormat("EEEE, d MMMM", Locale("ru"))
+            data_text.text = dateFormat.format(calendar.time)
+
+            // Update day number
+            val dayNumber = view?.findViewById<TextView>(R.id.day_number)
+            dayNumber?.text = calendar.get(Calendar.DAY_OF_MONTH).toString()
+        }
+
         // Set up month navigation
         view.findViewById<View>(R.id.prev_month).setOnClickListener {
             navigateToPreviousMonth()
